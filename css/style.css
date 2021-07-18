@@ -458,6 +458,7 @@ address {
 .tel-link {
   color: rgba(255, 255, 255, 0.6);
   font-style: normal;
+  text-decoration: none;
 }
 
 .footer .logo {
@@ -482,11 +483,11 @@ address {
   text-decoration: none;
   transition: color var(--main-duration) var(--main-timing-function);
 }
+
 .network-container {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-right: 93px;
   margin-left: 70px;
 }
 .network-container-title {
@@ -752,7 +753,10 @@ address {
   font-size: 12px;
   letter-spacing: 0.01em;
   color: #757575;
-  margin-bottom: 0;
+}
+
+.modal-form-field:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 .modal-form-input {
@@ -762,7 +766,6 @@ address {
   border-radius: 4px;
   padding-left: 42px;
   transition: border-color var(--main-duration) var(--main-timing-function);
-  margin-bottom: 10px;
 }
 
 .modal-form-input:focus {
@@ -778,7 +781,7 @@ address {
 
 .modal-icon {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 12px;
   transform: translateY(-50%);
   display: block;
@@ -816,7 +819,7 @@ address {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 30px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -829,6 +832,7 @@ address {
   width: 16px;
   height: 15px;
   border: 1px solid var(--portfolio-main-color);
+  border-radius: 2px;
   cursor: pointer;
   margin-right: 10px;
 }
@@ -844,7 +848,8 @@ address {
   overflow: hidden;
 }
 
-.modal-form-checkbox:checked + .modal-checkbox-label::before {
+.modal-form-checkbox:checked + .modal-checkbox-label::before,
+.modal-form-checkbox:focus + .modal-checkbox-label::before {
   border: none;
   background-image: url(../image/icon-check.svg);
   background-size: cover;
