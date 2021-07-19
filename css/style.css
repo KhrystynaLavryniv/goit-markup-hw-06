@@ -459,6 +459,7 @@ address {
   color: rgba(255, 255, 255, 0.6);
   font-style: normal;
   text-decoration: none;
+  transition: color var(--main-duration) var(--main-timing-function);
 }
 
 .footer .logo {
@@ -849,13 +850,16 @@ address {
 }
 
 .modal-form-checkbox:checked + .modal-checkbox-label::before,
-.modal-form-checkbox:focus + .modal-checkbox-label::before {
+.modal-form-checkbox:focus:checked + .modal-checkbox-label::before {
   border: none;
   background-image: url(../image/icon-check.svg);
   background-size: cover;
   background-position: center;
   max-width: 16px;
   height: 15px;
+}
+.modal-form-checkbox:focus + .modal-checkbox-label::before {
+  border: 1px solid var(--color-accent);
 }
 
 .modal-label-link {
